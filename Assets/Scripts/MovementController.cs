@@ -7,6 +7,8 @@ public class MovementController : MonoBehaviour {
 
     private float movespeed;
     private int moveDirection;
+    private float verticalSpeed = 0;
+    private float gravity = 20;
 
     private CreatureScript creatureScript;
     private CharacterController charController;
@@ -30,6 +32,7 @@ public class MovementController : MonoBehaviour {
     void Move(float speed) {
         var movement = moveDirection * speed;
         movement *= Time.deltaTime;
+        transform.position += new Vector3(movement, 0, 0);
         //collisionFlags = CharacterController.Move(new Vector3(0, movement,0));
     }
 }
