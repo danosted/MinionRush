@@ -13,6 +13,8 @@ public class CreatureScript : MonoBehaviour {
 
     public int moveDirection = 1;
 
+    public GameObject deathFX;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -26,6 +28,7 @@ public class CreatureScript : MonoBehaviour {
 
     public void Die()
     {
+        Instantiate(deathFX);
         Destroy(gameObject);
     }
 }
