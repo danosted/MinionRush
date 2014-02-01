@@ -69,7 +69,7 @@ public class FightController : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log(gameObject + " hit a collider with name " + col.gameObject);
+        //Debug.Log(gameObject + " hit a collider with name " + col.gameObject);
         if (col.gameObject.tag == "Ground")
         {
 

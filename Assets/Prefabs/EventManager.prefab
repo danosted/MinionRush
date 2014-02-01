@@ -23,7 +23,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.19901896, y: 2.30070591, z: .00645756721}
+  m_LocalPosition: {x: -7.29757214, y: 2.42222214, z: -5.97908497}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -41,7 +41,12 @@ MonoBehaviour:
   spawnPointObject: {fileID: 0}
   enemySpawnTimer: 4
   barrelSpawnTimer: 5
-  enemyPrefab: {fileID: 100000, guid: 9f30646e684813d49bc96af8ecc5cfcf, type: 2}
+  levelScaleTime: 35
+  enemyPrefab:
+  - {fileID: 100000, guid: 9f30646e684813d49bc96af8ecc5cfcf, type: 2}
+  - {fileID: 100124, guid: 67987294a7f2bea4b8d7851b5549900c, type: 2}
+  - {fileID: 100006, guid: f6e812f4574f6094e97c7a36b46e1705, type: 2}
+  maxLvl: 1
   barrelPrefab: {fileID: 100008, guid: 352dbd90b0c21ee4582227872a6133c0, type: 2}
 --- !u!1001 &100100000
 Prefab:
