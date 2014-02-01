@@ -13,7 +13,7 @@ public class MovementController : MonoBehaviour {
     private CreatureScript creatureScript;
     private CharacterController charController;
 
-    private CollisionFlags collisionFlags;
+    private bool shouldMove = true;
 
 	// Use this for initialization
 	void Start () {
@@ -25,7 +25,11 @@ public class MovementController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Move(movespeed);
+        if (shouldMove)
+        {
+            //Debug.Log(gameObject + "is moving");
+            Move(movespeed);
+        }
 	    
 	}
 
@@ -34,5 +38,11 @@ public class MovementController : MonoBehaviour {
         movement *= Time.deltaTime;
         transform.position += new Vector3(movement, 0, 0);
         //collisionFlags = CharacterController.Move(new Vector3(0, movement,0));
+    }
+
+    public void SetMoving(bool s)
+    {
+       //new WaitForSeconds(Random.Range(0.1f, 0.5f));
+        shouldMove = s;
     }
 }
