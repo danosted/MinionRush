@@ -22,4 +22,10 @@ public class CreatureScript : MonoBehaviour {
 	void Update () {
 	
 	}
+    // NO CHANGE VALUES OF THIS SCRIPT (during runtime). HANDS OFF
+
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
 }
