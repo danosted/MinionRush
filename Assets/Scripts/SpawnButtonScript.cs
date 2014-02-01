@@ -17,7 +17,6 @@ public class SpawnButtonScript : MonoBehaviour {
 	void Start()
 	{
 		clickable = GetComponent<Clickable>();
-		clickable.OnPress += ShowMinionSelectPopUp;
 		clickable.OnClick += ShowMinionSelectPopUp;
 		isShowingPopup = false;
 

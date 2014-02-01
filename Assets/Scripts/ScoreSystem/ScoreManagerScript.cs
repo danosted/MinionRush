@@ -18,7 +18,7 @@ public class ScoreManagerScript : MonoBehaviour {
 
 	public bool RemoveGold(int gold)
 	{
-		if(this.gold - gold >= 0)
+		if(this.gold-gold >= 0)
 		{
 			this.gold -= gold;
 			return true;
@@ -34,9 +34,9 @@ public class ScoreManagerScript : MonoBehaviour {
 		this.goo += goo;
 	}
 	
-	public bool RemoveGoo(int gold)
+	public bool RemoveGoo(int goo)
 	{
-		if(this.goo - goo >= 0)
+		if(this.goo-goo >= 0)
 		{
 			this.goo -= goo;
 			return true;
