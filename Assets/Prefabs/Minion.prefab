@@ -11,11 +11,11 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
-  - 114: {fileID: 11400002}
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400004}
   - 58: {fileID: 5800000}
   - 50: {fileID: 5000000}
+  - 114: {fileID: 11400002}
   m_Layer: 8
   m_Name: Minion
   m_TagString: Untagged
@@ -99,17 +99,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc64312692e342f4faac6517dc36b147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
-  movespeed: 1
-  damage: 1
+  health: 10
+  movespeed: 5
+  damage: 5
   range: 1
   attackCooldown: 1
   goo: 0
   gold: 0
   moveDirection: 1
+  deathFX: {fileID: 100002, guid: 9e566b941651636489ea64d6ad565f33, type: 2}
 --- !u!114 &11400002
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
@@ -126,6 +127,7 @@ MonoBehaviour:
   goo: 0
   gold: 0
   moveDirection: 1
+  deathFX: {fileID: 0}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
