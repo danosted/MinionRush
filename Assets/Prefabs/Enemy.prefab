@@ -1773,6 +1773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mesh: {fileID: 100124}
+  attackAnimation: Punch
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

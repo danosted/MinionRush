@@ -1903,7 +1903,7 @@ MonoBehaviour:
   damage: 5
   range: 1
   attackCooldown: .400000006
-  goo: 0
+  goo: 10
   gold: 0
   moveDirection: 1
   deathFX: {fileID: 100002, guid: 9e566b941651636489ea64d6ad565f33, type: 2}
