@@ -10,7 +10,7 @@ public class MovementController : MonoBehaviour {
     private float verticalSpeed = 0;
     private float gravity = 20;
 
-    private CreatureScript creatureScript;
+    private ObjectStatsScript creatureScript;
     private CharacterController charController;
     private EnemyAnimationController animController;
 
@@ -18,7 +18,7 @@ public class MovementController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        creatureScript = transform.GetComponent<CreatureScript>();
+        creatureScript = transform.GetComponent<ObjectStatsScript>();
         movespeed = creatureScript.movespeed;
         moveDirection = creatureScript.moveDirection;
         charController = transform.GetComponent<CharacterController>();

@@ -28,7 +28,7 @@ public class MinionSpawnerScript : MonoBehaviour {
 
 	private void CheckMinionSpawn(int id)
 	{
-		if(scoreManager.RemoveGoo(minions[id].GetComponent<CreatureScript>().goo))
+		if(scoreManager.RemoveGoo(minions[id].GetComponent<ObjectStatsScript>().goo))
 		{
 			SpawnMinion(id);
 		}
