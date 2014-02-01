@@ -17,11 +17,13 @@ public class FightController : MonoBehaviour {
 
     private MovementController moveController;
     private CreatureScript creatureScript;
+    private EnemyAnimationController animController;
 
 	// Use this for initialization
 	void Start () {
         moveController = transform.GetComponent<MovementController>();
         creatureScript = transform.GetComponent<CreatureScript>();
+        animController = transform.GetComponent<EnemyAnimationController>();
         damage = creatureScript.damage;
         attackCd = creatureScript.attackCooldown;
         health = creatureScript.health;
@@ -30,17 +32,18 @@ public class FightController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (fighting && target)
+        if (fighting)
         {
             if (curAtkCd > attackCd)
             {
-                //got a target an' ready to bash 'em!
-                float targetHealth = target.ApplyDamage(damage);
-                GameObject.Instantiate(attackFX, target.transform.position, Quaternion.identity);
-                curAtkCd = 0;
-                if (targetHealth > 0)
+                if (target)
                 {
-                    //keep fighting this guy
+                    //got a target an' ready to bash 'em!
+                    if (animController)
+                        animController.PlayAnimation("punch");
+                    float targetHealth = target.ApplyDamage(damage);
+                    GameObject.Instantiate(attackFX, target.transform.position, Quaternion.identity);
+                    curAtkCd = 0;
                 }
                 else
                 {
@@ -100,5 +103,7 @@ public class FightController : MonoBehaviour {
         {
             target = null;
         }
+        if (animController)
+            animController.PlayAnimation("walk");
     }
 }

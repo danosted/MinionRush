@@ -12,6 +12,7 @@ public class MovementController : MonoBehaviour {
 
     private CreatureScript creatureScript;
     private CharacterController charController;
+    private EnemyAnimationController animController;
 
     private bool shouldMove = true;
 
@@ -21,6 +22,7 @@ public class MovementController : MonoBehaviour {
         movespeed = creatureScript.movespeed;
         moveDirection = creatureScript.moveDirection;
         charController = transform.GetComponent<CharacterController>();
+        animController = transform.GetComponent<EnemyAnimationController>();
 	}
 	
 	// Update is called once per frame
