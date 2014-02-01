@@ -12,7 +12,7 @@ public class HealthbarScript : MonoBehaviour {
 
 	void Start () {
 
-			maxHealth = transform.parent.GetComponent<CreatureScript>().health;
+			maxHealth = transform.parent.GetComponent<ObjectStatsScript>().health;
 			currentHealth = maxHealth;
 			myMaterial = greenPart.renderer.material;
 	
