@@ -6,6 +6,8 @@ public class MinionSpawnerScript : MonoBehaviour {
 	[SerializeField]
 	private GameObject minionType1;
 	[SerializeField]
+	private GameObject SpawnPosition;
+	[SerializeField]
 	private float gooAmount;
 
 	private Clickable clickable;
@@ -19,7 +21,9 @@ public class MinionSpawnerScript : MonoBehaviour {
 
 	private void SpawnMinion()
 	{
-
+		GameObject minionGO;
+		minionGO = Instantiate(minionType1, SpawnPosition.transform.position, minionType1.transform.rotation) as GameObject;
+		minionGO.rigidbody2D.AddForce(Vector3.right * 100f);
 	}
 
 }
