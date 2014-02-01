@@ -11,7 +11,7 @@ public class MovementController : MonoBehaviour {
     private CreatureScript creatureScript;
     private CharacterController charController;
 
-    private var collisionFlags : CollisionFlags;
+    private CollisionFlags collisionFlags;
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +30,6 @@ public class MovementController : MonoBehaviour {
     void Move(float speed) {
         var movement = moveDirection * speed;
         movement *= Time.deltaTime;
-        collisionFlags = CharacterController.Move(new Vector3(0, movement,0));
+        //collisionFlags = CharacterController.Move(new Vector3(0, movement,0));
     }
 }
