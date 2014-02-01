@@ -95,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 2, z: 1}
+  m_LocalPosition: {x: -4, y: 2, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400008}
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gooAmount: 200
-  poopForce: 300
+  poopForce: 100
   pool: {fileID: 400004}
   minionType1: {fileID: 100000, guid: 5b5835db4d8e29143b7110976066a527, type: 2}
   minionType2: {fileID: 100000, guid: db0ff61adcedc9543819fa3ebbd007a7, type: 2}
