@@ -6,6 +6,8 @@ public class FightController : MonoBehaviour {
     public GameObject attackFX;
 
     private FightController target;
+	[SerializeField]
+	private GameObject healthbarGO;
 
     private float damage;
     private float attackCd;
@@ -18,12 +20,14 @@ public class FightController : MonoBehaviour {
     private MovementController moveController;
     private CreatureScript creatureScript;
     private EnemyAnimationController animController;
+	private HealthbarScript healthbar;
 
 	// Use this for initialization
 	void Start () {
         moveController = transform.GetComponent<MovementController>();
         creatureScript = transform.GetComponent<CreatureScript>();
         animController = transform.GetComponent<EnemyAnimationController>();
+		healthbar = healthbarGO.GetComponent<HealthbarScript>();
         damage = creatureScript.damage;
         attackCd = creatureScript.attackCooldown;
         health = creatureScript.health;
@@ -80,6 +84,7 @@ public class FightController : MonoBehaviour {
 
     float ApplyDamage(float dam)
     {
+		healthbar.DamageTaken(dam);
         health -= dam;
         if(health > 0) {
             //still alive bitches!
