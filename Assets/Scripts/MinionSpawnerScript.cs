@@ -4,9 +4,9 @@ using System.Collections;
 public class MinionSpawnerScript : MonoBehaviour {
 
 	[SerializeField]
-	private float gooAmount;
-	[SerializeField]
 	private float poopForce;
+	[SerializeField]
+	private ScoreManagerScript scoreManager;
 	[SerializeField]
 	private Transform pool;
 	[SerializeField]
@@ -16,13 +16,22 @@ public class MinionSpawnerScript : MonoBehaviour {
 	[SerializeField]
 	private GameObject[] spawnpoints;
 
+
 	void Start () {
 	
 		for(int i = 0; i < buttons.Length; i++)
 		{
-			buttons[i].GetComponent<SpawnButtonScript>().OnMinionSelect += SpawnMinion;
+			buttons[i].GetComponent<SpawnButtonScript>().OnMinionSelect += CheckMinionSpawn;
 		}
 
+	}
+
+	private void CheckMinionSpawn(int id)
+	{
+		if(scoreManager.RemoveGoo(minions[id].GetComponent<CreatureScript>().goo))
+		{
+			SpawnMinion(id);
+		}
 	}
 
 	private void SpawnMinion(int id)
