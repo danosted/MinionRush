@@ -1903,6 +1903,7 @@ MonoBehaviour:
   gold: 0
   moveDirection: -1
   deathFX: {fileID: 100000, guid: caf20877f7cce4351a9b1cfef8dcd186, type: 2}
+  pickup: {fileID: 100000, guid: ab6ae5f1e54f1e64e877e60235deeb26, type: 2}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

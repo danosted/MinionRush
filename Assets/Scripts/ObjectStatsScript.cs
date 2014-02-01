@@ -14,6 +14,7 @@ public class ObjectStatsScript : MonoBehaviour {
     public int moveDirection = 1;
 
     public GameObject deathFX;
+	public GameObject pickup;
 
 	// Use this for initialization
 	void Start () {
@@ -28,7 +29,13 @@ public class ObjectStatsScript : MonoBehaviour {
 
     public void Die()
     {
-        Instantiate(deathFX, transform.position, Quaternion.identity);
+		if(deathFX)
+        	Instantiate(deathFX, transform.position, Quaternion.identity);
+		if(pickup)
+		{
+			GameObject PickupScriptGO = Instantiate(pickup, transform.position, Quaternion.identity) as GameObject;
+			PickupScriptGO.GetComponent<PickupScript>().SetDropValues(goo, gold);
+		}
         Destroy(gameObject);
     }
 }

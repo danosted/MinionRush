@@ -5,15 +5,18 @@ public class PickupScript : MonoBehaviour {
 
 	private int gooToAdd;
 	private int goldToAdd;
-
-	//TODO: Inject
-	[SerializeField]
+	
 	private ScoreManagerScript scoreManager;
 
 	void Start()
 	{
-		gooToAdd = GetComponent<ObjectStatsScript>().goo;
-        goldToAdd = GetComponent<ObjectStatsScript>().gold;
+		scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManagerScript>();
+	}
+
+	public void SetDropValues(int goo, int gold)
+	{
+		gooToAdd = goo;
+		goldToAdd = gold;
 	}
 
 	void OnTriggerEnter2D()
