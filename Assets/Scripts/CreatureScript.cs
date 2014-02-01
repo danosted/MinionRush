@@ -28,7 +28,7 @@ public class CreatureScript : MonoBehaviour {
 
     public void Die()
     {
-        Instantiate(deathFX);
+        Instantiate(deathFX, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
