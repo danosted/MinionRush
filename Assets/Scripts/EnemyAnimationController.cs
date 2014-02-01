@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AnimationController : MonoBehaviour {
+public class EnemyAnimationController : MonoBehaviour {
 
     public GameObject mesh;
+
+    public string attackAnimation;
 
     private Animator animator;
 
@@ -13,12 +15,11 @@ public class AnimationController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	    
+	void Update (){
 	}
 
-    public void StartAnim(string anim)
+    public void PlayAnimation(string anim)
     {
-         
+        mesh.animation.Play(anim);
     }
 }

@@ -430,6 +430,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 332c4a01cbe2c7e408abf510babbf5c5, type: 2}
+      propertyPath: goo
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 332c4a01cbe2c7e408abf510babbf5c5, type: 2}
   m_RootGameObject: {fileID: 1380369272}
@@ -769,7 +773,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400002, guid: 9f30646e684813d49bc96af8ecc5cfcf, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9f30646e684813d49bc96af8ecc5cfcf, type: 2}
   m_RootGameObject: {fileID: 548520624}
   m_IsPrefabParent: 0
@@ -1080,9 +1085,8 @@ MonoBehaviour:
 --- !u!114 &548520627
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: 9f30646e684813d49bc96af8ecc5cfcf,
-    type: 2}
-  m_PrefabInternal: {fileID: 435398209}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 548520624}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1090,6 +1094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mesh: {fileID: 1276353454}
+  attackAnimation: Punch
 --- !u!61 &548520628
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3147,7 +3152,7 @@ MonoBehaviour:
   damage: 5
   range: 1
   attackCooldown: .400000006
-  goo: 0
+  goo: 10
   gold: 0
   moveDirection: 1
   deathFX: {fileID: 100002, guid: 9e566b941651636489ea64d6ad565f33, type: 2}
