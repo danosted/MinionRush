@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CreatureScript : MonoBehaviour {
+public class ObjectStatsScript : MonoBehaviour {
 
     public float health = 1;
     public float movespeed = 1;

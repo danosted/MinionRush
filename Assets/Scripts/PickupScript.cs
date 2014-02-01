@@ -12,8 +12,8 @@ public class PickupScript : MonoBehaviour {
 
 	void Start()
 	{
-		gooToAdd = GetComponent<CreatureScript>().goo;
-		goldToAdd = GetComponent<CreatureScript>().gold;
+		gooToAdd = GetComponent<ObjectStatsScript>().goo;
+        goldToAdd = GetComponent<ObjectStatsScript>().gold;
 	}
 
 	void OnTriggerEnter2D()

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyScript : CreatureScript {
+public class EnemyScript : ObjectStatsScript {
 
 	// Use this for initialization
 	void Start () {

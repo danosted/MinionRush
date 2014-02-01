@@ -18,14 +18,14 @@ public class FightController : MonoBehaviour {
     private bool fighting = false;
 
     private MovementController moveController;
-    private CreatureScript creatureScript;
+    private ObjectStatsScript creatureScript;
     private EnemyAnimationController animController;
 	private HealthbarScript healthbar;
 
 	// Use this for initialization
 	void Start () {
         moveController = transform.GetComponent<MovementController>();
-        creatureScript = transform.GetComponent<CreatureScript>();
+        creatureScript = transform.GetComponent<ObjectStatsScript>();
         animController = transform.GetComponent<EnemyAnimationController>();
 		healthbar = healthbarGO.GetComponent<HealthbarScript>();
         damage = creatureScript.damage;
@@ -38,7 +38,7 @@ public class FightController : MonoBehaviour {
 	void Update () {
         if (fighting)
         {
-            if (curAtkCd > attackCd)
+            if (curAtkCd > attackCd && damage > 0)
             {
                 if (target)
                 {
