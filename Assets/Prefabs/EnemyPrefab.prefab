@@ -1894,13 +1894,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1f986927de640459d6fe9827b4e680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
-  movespeed: 2
+  health: 55
+  movespeed: 1
   damage: 10
   range: 1
   attackCooldown: 1.10000002
-  goo: 25
-  gold: 0
+  goo: 15
+  gold: 5
   moveDirection: -1
   deathFX: {fileID: 100000, guid: caf20877f7cce4351a9b1cfef8dcd186, type: 2}
   pickup: {fileID: 100000, guid: ab6ae5f1e54f1e64e877e60235deeb26, type: 2}

@@ -5,10 +5,10 @@ public class EventManager : MonoBehaviour {
 
     public GameObject spawnPointObject;
 
-    public float enemySpawnTimer = 4.0f;
-    public float barrelSpawnTimer = 5.0f;
+    public float enemySpawnTimer = 3.5f;
+    public float barrelSpawnTimer = 2f;
 
-    public int levelScaleTime = 35;
+    public int levelScaleTime = 25;
 
     [SerializeField]
     public GameObject[] enemyPrefab;
@@ -43,7 +43,7 @@ public class EventManager : MonoBehaviour {
             GameObject newEnemy;
             newEnemy = Instantiate(enemyPrefab[curLvl], spawnPoint, Quaternion.identity) as GameObject;
             newEnemy.GetComponent<ObjectStatsScript>().SetStats();
-            nextEnemySpawnTimer = enemySpawnTimer + Random.Range(-1.0f, 1.0f);
+            nextEnemySpawnTimer = enemySpawnTimer + Random.Range(-0.7f, 0.7f);
             curEnemySpawnTimer = 0.0f;
         }
         else
@@ -57,7 +57,7 @@ public class EventManager : MonoBehaviour {
             GameObject newBarrel;
             newBarrel = Instantiate(barrelPrefab, spawnPoint, Quaternion.identity) as GameObject;
             newBarrel.GetComponent<ObjectStatsScript>().SetStats();
-            nextBarrelSpawnTimer = barrelSpawnTimer + Random.Range(-1.0f, 1.0f);
+            nextBarrelSpawnTimer = barrelSpawnTimer + Random.Range(-0.4f, 0.4f);
             curBarrelSpawnTimer = 0.0f;
         }
         else
@@ -71,8 +71,8 @@ public class EventManager : MonoBehaviour {
             if(curLvl < maxLvl)
                 curLvl++;
             timeElapsed = 0.0f;
-            enemySpawnTimer *= 0.93f;
-            barrelSpawnTimer *= 0.93f;
+            enemySpawnTimer *= 0.8f;
+            barrelSpawnTimer *= 0.8f;
         }
 
 	}

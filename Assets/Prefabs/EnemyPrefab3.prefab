@@ -1907,11 +1907,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 120
-  movespeed: 2.5
+  movespeed: .699999988
   damage: 22
   range: 1
   attackCooldown: .699999988
-  goo: 50
+  goo: 35
   gold: 20
   moveDirection: -1
   deathFX: {fileID: 100000, guid: caf20877f7cce4351a9b1cfef8dcd186, type: 2}
