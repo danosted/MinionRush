@@ -15,6 +15,17 @@ public class MinionSpawnerScript : MonoBehaviour {
 	private GameObject[] buttons;
 	[SerializeField]
 	private GameObject[] spawnpoints;
+    private int[] upgrades;
+
+    [SerializeField]
+    private UIManager uiMan;
+
+    [SerializeField]
+    private float healthPerUpgrade = 2;
+    [SerializeField]
+    private float damagePerUpgrade = 1;
+    [SerializeField]
+    private float movespeedPerUpgrade = -0.2f;
 
 
 	void Start () {
@@ -38,8 +49,14 @@ public class MinionSpawnerScript : MonoBehaviour {
 	{
 		GameObject minionGO;
 		minionGO = Instantiate(minions[id], spawnpoints[id].transform.position, minions[id].transform.rotation) as GameObject;
-		minionGO.transform.parent = pool;
+        minionGO.GetComponent<MinionScript>().SetStats(upgrades[0]*healthPerUpgrade, upgrades[1]*damagePerUpgrade, upgrades[2]*movespeedPerUpgrade);
+        minionGO.transform.parent = pool;
 		minionGO.rigidbody2D.AddForce(Vector3.right * poopForce);
 	}
 
+    public void Upgrade(int id)
+    {
+        upgrades[id]++;
+        uiMan.updateUpgrades(id, upgrades[id]);
+    }
 }

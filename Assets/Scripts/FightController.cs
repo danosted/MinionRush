@@ -24,14 +24,6 @@ public class FightController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        moveController = transform.GetComponent<MovementController>();
-        creatureScript = transform.GetComponent<ObjectStatsScript>();
-        animController = transform.GetComponent<EnemyAnimationController>();
-		healthbar = healthbarGO.GetComponent<HealthbarScript>();
-        damage = creatureScript.damage;
-        attackCd = creatureScript.attackCooldown;
-        health = creatureScript.health;
-        curAtkCd = attackCd;
 	}
 	
 	// Update is called once per frame
@@ -110,5 +102,17 @@ public class FightController : MonoBehaviour {
         }
         if (animController)
             animController.PlayAnimation("walk");
+    }
+
+    public void Initialize()
+    {
+        moveController = transform.GetComponent<MovementController>();
+        creatureScript = transform.GetComponent<ObjectStatsScript>();
+        animController = transform.GetComponent<EnemyAnimationController>();
+        healthbar = healthbarGO.GetComponent<HealthbarScript>();
+        damage = creatureScript.damage;
+        attackCd = creatureScript.attackCooldown;
+        health = creatureScript.health;
+        curAtkCd = attackCd;
     }
 }

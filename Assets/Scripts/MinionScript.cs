@@ -12,4 +12,12 @@ public class MinionScript : ObjectStatsScript {
 	void Update () {
 	
 	}
+
+    public void SetStats(float health = 0.0f, float dam = 0.0f, float movespeed = 0.0f)
+    {
+        this.health += health;
+        this.damage += dam;
+        this.movespeed += movespeed;
+        transform.GetComponent<FightController>().Initialize();
+    }
 }

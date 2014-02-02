@@ -14,6 +14,9 @@ public class UIManager : MonoBehaviour {
     [SerializeField]
     private TextMesh minionText;
 
+    [SerializeField]
+    private TextMesh[] upgradeTexts;
+
 	// Use this for initialization
 	void Start () {
 	}
@@ -49,5 +52,10 @@ public class UIManager : MonoBehaviour {
     public void updateMinioncount(int c)
     {
         minionText.text = "Minion Count: " + c;
+    }
+
+    public void updateUpgrades(int id, int u)
+    {
+        upgradeTexts[id].text = "" + u;
     }
 }
