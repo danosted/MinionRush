@@ -32,7 +32,7 @@ public class EventManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         spawnPoint = spawnPointObject.transform.position;
-        maxLvl = enemyPrefab.Length;
+        maxLvl = enemyPrefab.Length-1;
 	}
 	
 	// Update is called once per frame
@@ -40,7 +40,9 @@ public class EventManager : MonoBehaviour {
         if (curEnemySpawnTimer > nextEnemySpawnTimer)
         {
             //Debug.Log("Spawning enemy!");
-            Instantiate(enemyPrefab[curLvl], spawnPoint, Quaternion.identity);
+            GameObject newEnemy;
+            newEnemy = Instantiate(enemyPrefab[curLvl], spawnPoint, Quaternion.identity) as GameObject;
+            newEnemy.GetComponent<ObjectStatsScript>().SetStats();
             nextEnemySpawnTimer = enemySpawnTimer + Random.Range(-1.0f, 1.0f);
             curEnemySpawnTimer = 0.0f;
         }
@@ -52,7 +54,9 @@ public class EventManager : MonoBehaviour {
         if (curBarrelSpawnTimer > nextBarrelSpawnTimer)
         {
             //Debug.Log("Spawning barrel!");
-            Instantiate(barrelPrefab, spawnPoint, Quaternion.identity);
+            GameObject newBarrel;
+            newBarrel = Instantiate(barrelPrefab, spawnPoint, Quaternion.identity) as GameObject;
+            newBarrel.GetComponent<ObjectStatsScript>().SetStats();
             nextBarrelSpawnTimer = barrelSpawnTimer + Random.Range(-1.0f, 1.0f);
             curBarrelSpawnTimer = 0.0f;
         }

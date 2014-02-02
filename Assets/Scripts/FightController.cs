@@ -24,6 +24,7 @@ public class FightController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        moveController = transform.GetComponent<MovementController>();
 	}
 	
 	// Update is called once per frame
@@ -104,9 +105,9 @@ public class FightController : MonoBehaviour {
             animController.PlayAnimation("walk");
     }
 
-    public void Initialize()
+    public void Init()
     {
-        moveController = transform.GetComponent<MovementController>();
+        //Debug.Log("Initialized !");
         creatureScript = transform.GetComponent<ObjectStatsScript>();
         animController = transform.GetComponent<EnemyAnimationController>();
         healthbar = healthbarGO.GetComponent<HealthbarScript>();

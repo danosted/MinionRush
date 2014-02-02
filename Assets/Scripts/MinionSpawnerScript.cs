@@ -15,7 +15,7 @@ public class MinionSpawnerScript : MonoBehaviour {
 	private GameObject[] buttons;
 	[SerializeField]
 	private GameObject[] spawnpoints;
-    private int[] upgrades;
+    private int[] upgrades = new int[3];
 
     [SerializeField]
     private UIManager uiMan;

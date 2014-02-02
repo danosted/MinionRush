@@ -56,6 +56,7 @@ public class UIManager : MonoBehaviour {
 
     public void updateUpgrades(int id, int u)
     {
+        //Debug.Log("Updating text for upgrade nr. " + id);
         upgradeTexts[id].text = "" + u;
     }
 }

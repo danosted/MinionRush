@@ -21,6 +21,7 @@ public class UpgradeButtonScript : MonoBehaviour {
     [SerializeField]
     private int[] upgradesCost;
 
+    private int upgLvl = 0;
     
 
     void Start()
@@ -33,8 +34,10 @@ public class UpgradeButtonScript : MonoBehaviour {
 
     void UpgradeShit()
     {
-        if(scoreScript.RemoveGold(upgradesCost[id]))
+        if(scoreScript.RemoveGold(upgradesCost[upgLvl]))
         {
+            //Debug.Log("Calling for upgrade on " + id);
+            upgLvl++;
             spawnerScript.Upgrade(id);
         }
     }

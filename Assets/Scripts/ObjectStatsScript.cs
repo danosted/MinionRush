@@ -38,4 +38,13 @@ public class ObjectStatsScript : MonoBehaviour {
 		}
         Destroy(gameObject);
     }
+
+    public void SetStats(float health = 0.0f, float dam = 0.0f, float movespeed = 0.0f)
+    {
+        //Debug.Log("Setting stats!");
+        this.health += health;
+        this.damage += dam;
+        this.movespeed += movespeed;
+        transform.GetComponent<FightController>().Init();
+    }
 }
