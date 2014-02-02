@@ -1,0 +1,6 @@
+vertical action
+more types of minions/enemies/...
+backgrounds/textures/environment
+Sounds
+Playeer interaction : how can she slap?
+fix no atk bug
